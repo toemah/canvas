@@ -1,0 +1,94 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#main {
+    flex: 1;
+}
+
+#toolbar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 2px;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 2;
+}
+
+.picker {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2px;
+    background-color: lightgray;
+}
+
+.item {
+    padding: 4px;
+    height: 100%;
+    width: 32px;
+    border-radius: 25%;
+}
+
+.colorItem {
+    background-clip: content-box;
+}
+
+.pixel {
+    position: absolute;
+    user-select: none;
+}
+
+.shapeItem {
+    display: none;
+}
+
+#shapeList {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+
+#shapeList>input {
+    display: none;
+}
+
+#shapeList>input:checked+label {
+    background-color: #aeaeae;
+    border: 1px solid whitesmoke;
+}
+
+#shapeList>label {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+
+#shapeList>label>div {
+    display: inline-block;
+    border: 2px solid black;
+    box-sizing: border-box;
+    height: 20px;
+    width: 20px;
+}
+
+#shapeSizeOutput {
+    width: 3ch;
+    text-align: center;
+}
+
+.circle {
+    border-radius: 50%;
+}
