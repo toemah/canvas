@@ -1,4 +1,5 @@
 const canvas = document.querySelector("#main")
+const clearButton = document.querySelector("#clear")
 const colors = [...document.querySelectorAll(".colorItem")]
 const shapes = [...document.querySelectorAll(".shapeItem")]
 const sizeSlider = document.querySelector("#shapeSizeInput")
@@ -22,6 +23,10 @@ const paint = function (ev) {
     canvas.onmousemove = paint
 }
 
+const clear = function() {
+    canvas.innerHTML = ""
+}
+
 colors.forEach(e => { e.onclick = e => { colorValue = e.currentTarget.value } })
 shapes.forEach(e => { e.oninput = e => { shape = e.currentTarget.value; console.log(e.currentTarget, shape) } }) 
 sizeSlider.oninput = () => {
@@ -31,3 +36,4 @@ sizeSlider.oninput = () => {
 }
 canvas.onmousedown = paint
 canvas.onmouseup = () => { canvas.onmousemove = null }
+clearButton.onclick = clear
