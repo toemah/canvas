@@ -14,23 +14,28 @@
 <body>
     <div id="toolbar">
         <div id="colorPicker" class="picker">
-            <button class="colorItem item" value="red" style="background-color: red;"></button>
-            <button class="colorItem item" value="green" style="background-color: green;"></button>
-            <button class="colorItem item" value="blue" style="background-color: blue;"></button>
-            <button class="colorItem item" value="yellow" style="background-color: yellow;"></button>
-            <button class="colorItem item" value="purple" style="background-color: purple;"></button>
-            <button class="colorItem item" value="white" style="background-color: white;"></button>
-            <button class="colorItem item" value="black" style="background-color: black;"></button>
+            <button class="colorItem item" value="red" style="background-color: red;" title="red"></button>
+            <button class="colorItem item" value="green" style="background-color: green;" title="green"></button>
+            <button class="colorItem item" value="blue" style="background-color: blue;" title="blue"></button>
+            <button class="colorItem item" value="yellow" style="background-color: yellow;" title="yellow"></button>
+            <button class="colorItem item" value="purple" style="background-color: purple;" title="purple"></button>
+            <button class="colorItem item" value="white" style="background-color: white;" title="white"></button>
+            <button class="colorItem item" value="black" style="background-color: black;" title="black"></button>
         </div>
         <div id="shapePicker" class="picker">
             <div id="shapeList">
                 <input type="radio" name="shapeItem" class="shapeItem" id="squareShape" value="square" checked></input>
-                <label for="squareShape"><div id="squareLabel"></div></label>
+                <label title="square brush" for="squareShape"><div id="squareLabel"></div></label>
                 <input type="radio" name="shapeItem" class="shapeItem" id="circleShape" value="circle"></input>
-                <label for="circleShape"><div id="circleLabel" class="circle"></div></label>
+                <label title="circle brush" for="circleShape"><div id="circleLabel" class="circle"></div></label>
             </div>
-            <input type="range" name="shapeSize" id="shapeSizeInput" min="1" max="100" step="1" value="10">
-            <output for="shapeSize" id="shapeSizeOutput">10</output>
+            <div id="shapeSize">
+                <input title="brush size" type="range" name="shapeSize" id="shapeSizeInput" min="1" max="100" step="1" value="10">
+                <output for="shapeSize" id="shapeSizeOutput">10</output>
+            </div>
+            <div id="clear" title="clear everything">
+                <div>&times;</div>
+            </div>
         </div>
     </div>
     <div id="main">
